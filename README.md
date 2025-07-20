@@ -15,6 +15,13 @@ A modern, accessible, and fully-typed React application for searching GitHub rep
 - **Repository Details:** View repository name, description, stars, and owner info.
 - **Responsive & Accessible:** Clean, responsive UI with ARIA attributes for accessibility.
 - **Modern React Structure:** Uses functional components, custom hooks, and TypeScript types.
+- **Light/Dark Theme Toggle:** Instantly switch between beautiful light and dark themes with a single click. Your preference is remembered for future visits.
+
+---
+
+## Dark/Light Theme Toggle
+
+This app features a modern theme switcher in the top right corner. Click the sun/moon button to instantly toggle between a light and dark theme. Your choice is saved and will be used the next time you visit the app.
 
 ---
 
