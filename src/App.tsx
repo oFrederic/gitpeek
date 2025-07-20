@@ -28,6 +28,9 @@ function App() {
       {!loading && !error && repos.length === 0 && query && (
         <div className="info">No results found.</div>
       )}
+      {!loading && !error && !query && (
+        <div className="info">Start by entering a search term above. For example, try <strong>react</strong>.</div>
+      )}
       <RepoList repos={repos} />
       {totalPages > 1 && (
         <Pagination
