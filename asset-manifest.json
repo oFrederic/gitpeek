@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gitpeek/static/css/main.6d2c4103.css",
+    "main.js": "/gitpeek/static/js/main.700e26fc.js",
+    "index.html": "/gitpeek/index.html",
+    "main.6d2c4103.css.map": "/gitpeek/static/css/main.6d2c4103.css.map",
+    "main.700e26fc.js.map": "/gitpeek/static/js/main.700e26fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d2c4103.css",
+    "static/js/main.700e26fc.js"
+  ]
+}
