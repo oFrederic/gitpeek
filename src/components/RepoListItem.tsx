@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Repo } from '../types/repo';
 import { useGithubRepoAnalytics } from '../hooks/useGithubRepoAnalytics';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import styles from './RepoListItem.module.css';
 
 interface RepoListItemProps {
   repo: Repo;
@@ -22,19 +23,19 @@ const RepoListItem: React.FC<RepoListItemProps> = React.memo(({ repo }) => {
   const chartData = getCommitChartData(data);
 
   return (
-    <li className="repo-item">
-      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" aria-label={`View ${repo.full_name} on GitHub`}>
-        <div className="repo-header">
-          <img src={repo.owner.avatar_url} alt={repo.owner.login} className="avatar" />
-          <span className="repo-name">{repo.full_name}</span>
+    <li className={styles.root}>
+      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" aria-label={`View ${repo.full_name} on GitHub`} className={styles.link}>
+        <div className={styles.header}>
+          <img src={repo.owner.avatar_url} alt={repo.owner.login} className={styles.avatar} />
+          <span className={styles.name}>{repo.full_name}</span>
         </div>
-        <div className="repo-desc">{repo.description}</div>
-        <div className="repo-meta">
+        <div className={styles.desc}>{repo.description}</div>
+        <div className={styles.meta}>
           ⭐ {repo.stargazers_count} by {repo.owner.login}
         </div>
       </a>
       <button
-        className="analytics-toggle"
+        className={styles.analyticsToggle}
         onClick={() => setShowAnalytics((v) => !v)}
         aria-expanded={showAnalytics}
         aria-controls={`analytics-${repo.id}`}
@@ -43,7 +44,7 @@ const RepoListItem: React.FC<RepoListItemProps> = React.memo(({ repo }) => {
         {showAnalytics ? 'Hide Analytics' : 'Show Analytics'}
       </button>
       {showAnalytics && (
-        <div id={`analytics-${repo.id}`} className="repo-analytics" style={{ marginTop: 12 }}>
+        <div id={`analytics-${repo.id}`} className={styles.analytics} style={{ marginTop: 12 }}>
           {loading && <div className="info">Loading analytics...</div>}
           {error && <div className="error">{error}</div>}
           {!loading && !error && chartData.length > 0 && (

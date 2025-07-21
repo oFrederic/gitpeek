@@ -4,6 +4,8 @@ import SearchForm from './components/SearchForm';
 import RepoList from './components/RepoList';
 import Pagination from './components/Pagination';
 import { useGithubRepos } from './hooks/useGithubRepos';
+import infoStyles from './components/InfoMessage.module.css';
+import themeToggleStyles from './components/ThemeToggle.module.css';
 
 const PER_PAGE = 10;
 
@@ -37,7 +39,7 @@ function App() {
   return (
     <div className="github-search-app">
       <button
-        className="theme-toggle"
+        className={themeToggleStyles.root}
         onClick={toggleTheme}
         aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
         title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
@@ -46,13 +48,13 @@ function App() {
       </button>
       <h1>GitHub Repository Search</h1>
       <SearchForm query={query} onSearch={handleSearch} />
-      {loading && <div className="info">Loading...</div>}
-      {error && <div className="error">{error}</div>}
+      {loading && <div className={infoStyles.info}>Loading...</div>}
+      {error && <div className={infoStyles.error}>{error}</div>}
       {!loading && !error && repos.length === 0 && query && (
-        <div className="info">No results found.</div>
+        <div className={infoStyles.info}>No results found.</div>
       )}
       {!loading && !error && !query && (
-        <div className="info">Start by entering a search term above. For example, try <strong>react</strong>.</div>
+        <div className={infoStyles.info}>Start by entering a search term above. For example, try <strong>react</strong>.</div>
       )}
       <RepoList repos={repos} />
       {totalPages > 1 && (
