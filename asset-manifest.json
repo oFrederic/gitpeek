@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/gitpeek/static/css/main.16fd1683.css",
-    "main.js": "/gitpeek/static/js/main.9fed3dee.js",
+    "main.css": "/gitpeek/static/css/main.02e8db71.css",
+    "main.js": "/gitpeek/static/js/main.b2269719.js",
     "index.html": "/gitpeek/index.html",
-    "main.16fd1683.css.map": "/gitpeek/static/css/main.16fd1683.css.map",
-    "main.9fed3dee.js.map": "/gitpeek/static/js/main.9fed3dee.js.map"
+    "main.02e8db71.css.map": "/gitpeek/static/css/main.02e8db71.css.map",
+    "main.b2269719.js.map": "/gitpeek/static/js/main.b2269719.js.map"
   },
   "entrypoints": [
-    "static/css/main.16fd1683.css",
-    "static/js/main.9fed3dee.js"
+    "static/css/main.02e8db71.css",
+    "static/js/main.b2269719.js"
   ]
 }
