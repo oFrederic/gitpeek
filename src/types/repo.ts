@@ -10,4 +10,10 @@ export interface Repo {
     avatar_url: string;
     html_url: string;
   };
+}
+
+export interface CommitActivityWeek {
+  total: number;
+  week: number;
+  days: number[];
 } 

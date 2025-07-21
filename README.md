@@ -16,6 +16,13 @@ A modern, accessible, and fully-typed React application for searching GitHub rep
 - **Responsive & Accessible:** Clean, responsive UI with ARIA attributes for accessibility.
 - **Modern React Structure:** Uses functional components, custom hooks, and TypeScript types.
 - **Light/Dark Theme Toggle:** Instantly switch between beautiful light and dark themes with a single click. Your preference is remembered for future visits.
+- **Per-Repo Analytics:** View a commit activity chart for each repository by clicking "Show Analytics" on any result.
+
+---
+
+## Repository Analytics
+
+For each repository in the search results, you can click the **Show Analytics** button to view a chart of commit activity for the last 12 weeks. This feature fetches real-time data from the GitHub API and displays it in a responsive, accessible chart. Toggle the button to show or hide analytics for any repository.
 
 ---
 
@@ -54,6 +61,7 @@ npm run build
 2. Click "Search" or press Enter.
 3. Browse results and use pagination to navigate.
 4. Click a repository to view it on GitHub.
+5. Click "Show Analytics" on any repository to see a chart of recent commit activity.
 
 ---
 
